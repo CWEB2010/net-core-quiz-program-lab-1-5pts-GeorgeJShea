@@ -20,8 +20,8 @@ namespace ConsoleApp1
         {
             string begin;
             string repeat = "Y";
-            while (repeat == "Y")
-            {
+            while ( repeat == "Y")
+            { 
                 // this will see if the student is ready to test
                 // just a nice little intro screen
                 Console.WriteLine("Programming Fundementals Test");
