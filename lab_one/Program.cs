@@ -113,7 +113,163 @@ namespace ConsoleApp1
                         Console.WriteLine();
                         Console.WriteLine();
                     }
-                    Console.WriteLine();
+                    // will show you what questiosn you got wrong more clearly
+                    Console.Clear();
+                    qLoop = 0;
+                    QCount = 0;
+                    while (qLoop < 10)
+                    {
+                        // prints out in groups of 5 1 Question 4 Solutions
+                        if(testGuess[qLoop] == "A" && testGuess[qLoop] == testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        if (testGuess[qLoop] == "B" && testGuess[qLoop] == testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        if (testGuess[qLoop] == "C" && testGuess[qLoop] == testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        if (testGuess[qLoop] == "D" && testGuess[qLoop] == testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        else if(testGuess[qLoop] == "A" && testGuess[qLoop] != testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        else if(testGuess[qLoop] == "B" && testGuess[qLoop] != testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+
+                        }
+                        else if (testGuess[qLoop] == "C" && testGuess[qLoop] != testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        else if (testGuess[qLoop] == "D" && testGuess[qLoop] != testAswers[qLoop])
+                        {
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            QCount = QCount + 1;
+                            Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            QCount = QCount + 1;
+                        }
+                        qLoop = qLoop + 1;
+                    }
+
+
+                        Console.WriteLine();
                     Console.WriteLine("Test Completed");
                     Console.WriteLine();
                     Console.WriteLine();
