@@ -29,6 +29,7 @@ namespace ConsoleApp1
                 Console.WriteLine("This test will quiz you on");
                 Console.WriteLine("on your knowledge of .net");
                 Console.WriteLine("please answer in A,B,C or D");
+                Console.WriteLine("if you fail to do so it is your own fault");
                 Console.WriteLine("__________________________________________________");
                 Console.WriteLine("Do You Wish To Begin y/n");
                 begin = Console.ReadLine();
@@ -90,8 +91,11 @@ namespace ConsoleApp1
                         QCount = QCount + 1;
                         // gets user input and raies it to upper case
                         // to avoid case senesitivity
+
+                        int wrong = 0;
                         answers = Console.ReadLine();
                         answers = answers.ToUpper();
+
                         // if correct get a point and the guess is saved
                         if (answers == testAswers[guessPositCount])
                         {
@@ -116,25 +120,31 @@ namespace ConsoleApp1
                     while (qLoop < 10)
 
                     {
-                        // greens corrects
-                        // prints out in groups of 5 1 Question 4 Solutions
+                        // this simply loops through in sets of 4 10 times 
+                        // this will display everything 
 
+                        // Green is correct
+                        // Red is incorrect guess
+                        // White is nuetural no guess no right
                         //A
+
+                        // this is the exact same for A,B,C and D just with the letter switched
+                        // this prints out quistion x[1=10] depending on qloop
                         Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
+                        // this makes sure that the right answer is always green
                         if (testAswers[qLoop] == "A")
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-
                         }
+                        // this is for when you are wrong! and makes it red
                         else if (testGuess[qLoop] == "A")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-
                         }
+                        // this is simply white answers neither correct or incorrect
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.White;
-
                         }
 
                         //B
@@ -143,17 +153,14 @@ namespace ConsoleApp1
                         if (testAswers[qLoop] == "B")
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-
                         }
                         else if (testGuess[qLoop] == "B")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.White;
-
                         }
 
                         //C
@@ -162,17 +169,14 @@ namespace ConsoleApp1
                         if (testAswers[qLoop] == "C")
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-
                         }
                         else if (testGuess[qLoop] == "C")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.White;
-
                         }
 
                         //D
@@ -181,17 +185,14 @@ namespace ConsoleApp1
                         if (testAswers[qLoop] == "D")
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-
                         }
                         else if (testGuess[qLoop] == "D")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.White;
-
                         }
                         QCount = QCount + 1;
                         Console.WriteLine(testQuestions[QCount], Console.ForegroundColor);
