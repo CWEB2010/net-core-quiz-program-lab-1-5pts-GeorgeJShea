@@ -238,39 +238,8 @@ namespace ConsoleApp1
                     Console.WriteLine("__________________________________________________________");
                     // used to go through the array
                     int count = 0;
-                    Console.WriteLine("Correct Answers: ");
                     // prints out acutal answers to test
-                    foreach (string name in testAswers)
-                    {
-                        if (count == 0)
-                        {
-                            Console.Write(" " + testAswers[count]);
-                            count = count + 1;
-                        }
-                        else
-                        {
-                            Console.Write(", " + testAswers[count]);
-                            count = count + 1;
-                        }
-                    }
-                    //______________________________________________________________________
-                    count = 0;
-                    Console.WriteLine();
-                    Console.WriteLine("Your Answers:");
-                    // prints out what the users guessed
-                    foreach (string name in testGuess)
-                    {
-                        if (count == 0)
-                        {
-                            Console.Write(" " + testGuess[count]);
-                            count = count + 1;
-                        }
-                        else
-                        {
-                            Console.Write(", " + testGuess[count]);
-                            count = count + 1;
-                        }
-                    }
+
 
                     count = 0;
                     Console.WriteLine();
@@ -285,6 +254,7 @@ namespace ConsoleApp1
                     else
                     {
                         Console.WriteLine("Sorry You Failed Free To Try Again");
+                        Console.WriteLine("The Required Score To Pass Is 7");
                         Console.WriteLine();
                     }
 
