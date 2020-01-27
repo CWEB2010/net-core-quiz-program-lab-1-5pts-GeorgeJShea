@@ -5,8 +5,8 @@ _________________________________________________
 
 George Shea                          ßeta Product
 Created 22/1/2020
-Version 2.0
-Version Date: 22/1/2020
+Version 4.2
+Version Date: 27/1/2020
 
 small test that will test students on their knowledge
 .net core 
@@ -21,18 +21,30 @@ namespace ConsoleApp1
         {
             string begin;
             string repeat = "Y";
+            string open = "Y";
             while (repeat == "Y")
             {
+                // clear screen on restart
+                // dont have test confirm once you go through again. 
                 // intro screen teels you what the quiz is about
-                Console.WriteLine("Programming Fundementals Test");
-                Console.WriteLine("_________________________________________________");
-                Console.WriteLine("This test will quiz you on");
-                Console.WriteLine("on your knowledge of .net");
-                Console.WriteLine("please answer in A,B,C or D");
-                Console.WriteLine("if you fail to do so it is your own fault");
-                Console.WriteLine("__________________________________________________");
-                Console.WriteLine("Do You Wish To Begin y/n");
-                begin = Console.ReadLine();
+                Console.Clear();
+                if (open == "Y")
+                {
+                    Console.WriteLine("Programming Fundementals Test");
+                    Console.WriteLine("_________________________________________________");
+                    Console.WriteLine("This test will quiz you on");
+                    Console.WriteLine("on your knowledge of .net");
+                    Console.WriteLine("please answer in A,B,C or D");
+                    Console.WriteLine("if you fail to do so it is your own fault");
+                    Console.WriteLine("__________________________________________________");
+                    Console.WriteLine("Do You Wish To Begin y/n");
+                    begin = Console.ReadLine();
+                    open = "No More";
+                }
+                else
+                {
+                    begin = "yes";
+                }
                 if (begin == "n")
                 {
                     // finishs code and concludes with a goodbye
@@ -141,6 +153,11 @@ namespace ConsoleApp1
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
+                        // this is if some one fails to follow instructions ie does nto type in A B C or D
+                        else if (testGuess[qLoop] != "A" && testGuess[qLoop] != "B" && testGuess[qLoop] != "C" && testGuess[qLoop] != "D")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
                         // this is simply white answers neither correct or incorrect
                         else
                         {
@@ -155,6 +172,10 @@ namespace ConsoleApp1
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
                         else if (testGuess[qLoop] == "B")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
+                        else if (testGuess[qLoop] != "A" && testGuess[qLoop] != "B" && testGuess[qLoop] != "C" && testGuess[qLoop] != "D")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
@@ -174,6 +195,10 @@ namespace ConsoleApp1
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
+                        else if (testGuess[qLoop] != "A" && testGuess[qLoop] != "B" && testGuess[qLoop] != "C" && testGuess[qLoop] != "D")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.White;
@@ -187,6 +212,10 @@ namespace ConsoleApp1
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
                         else if (testGuess[qLoop] == "D")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
+                        else if (testGuess[qLoop] != "A" && testGuess[qLoop] != "B" && testGuess[qLoop] != "C" && testGuess[qLoop] != "D")
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
@@ -265,6 +294,7 @@ namespace ConsoleApp1
                     repeat = repeat.ToUpper();
                     Console.WriteLine("__________________________________________________________");
                 }
+
             }
         }
     }
