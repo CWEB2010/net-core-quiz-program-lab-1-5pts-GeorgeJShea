@@ -17,7 +17,12 @@ Show which answers are correct and what your guessed incorrectly
 Version 4.1 24/1/2020
 Added some comments as I did not bring it with the 4.0 update
 
-Version 5.0 --/-/2020
+Version 4.2 1/27/2020
+Added 2 features
+- feature one no longer askes if you ready once repeating quiz
+  -clears at beginging so no one can look at old quiz
+-if putting in none A,B,C or D answer will now display as all wrong
+
 
 will add questions
 
